@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="main.css" />
+	<!-- json2 is included because some browsers doesnt have it (e.g. ie8)	-->
+	<script src="json2.js"></script>		
+	<script src="easyWebSocket.min.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="jquery.tmpl.min.js"></script>
+	<script src="jQuery.url.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div class="header">
+			<div class="userContainer">
+				<span class="label">Username: </span>
+				<span class="username value">Unknown</span>
+			</div>
+		</div>
+		<div class="chatArea">
+		</div>
+		<script class="tmplChatMessage" type="text/x-jquery-tmpl">
+			<div>
+				<span class="username">${username}</span> :
+				<span class="message">${message}</span>
+			</div>
+		</script>
+		<script class="tmplChatJoin" type="text/x-jquery-tmpl">
+			<div>
+				<span class="username">${username}</span>
+				<span>just joined.</span>
+			</div>
+		</script>
+		<script class="tmplChatRename" type="text/x-jquery-tmpl">
+			<div>
+				<span class="oldUsername username">${oldUsername}</span>
+				<span>is renamed as</span>
+				<span class="newUsername username">${newUsername}</span>
+			</div>
+		</script>
+		
+		<div class="footer">
+			
+
+			<hr/>
+		</div>
+		
+		
+	</div>
+</body>
+</html>
